@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <h1>🐲 iFastCheck <button onclick="location.reload();">Reload</button></h1>
+    <h5>Type: Image</h5>
+    <h5 style="background-color: orange; padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg> Please keep in mind pressing the "Check" button multiple times together you are technically  ddosing iFastNet by requesting the image mutliple times</h5>
+    <h5 style="background-color: orange; padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg> Hosters with Cloudflare can result in false status due anti bot!</h5>
+    <hr class="seperator">
+    <h2>Byet</h2>
+    <h4 id="sa">ifastnet.com</h4>
+    <button onclick='check("byet");'>Check</button>
+    <hr class="seperator">
+    <h2>Hosters</h2>
+    <h4 id="hostingduck">hostingduck.ml</h4>
+    <h4 id="smallhost">smallhost.us.to</h4>
+    <h4 id="infinityfree">infinityfree.net</h4>
+    <h4 id="nxtshost">nxtshost.eu.org</h4>
+    <button onclick='check("hosters");'>Check</button>
+    <hr class="seperator">
+    <h5 style="background-color: lightskyblue; padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"/></svg> Suggest hosters <a href="https://discord.gg/sMgNFv5meJ">here!</a></h5>
+    
+    
+</body>
+
+<script>
+
+    function check(type) {
+        if(type == "byet") {
+            const ifast = document.createElement('imga')
+
+            ifast.innerHTML = `<img style="visibility: hidden; height: 0px;" src="https://ifastnet.com/portal/templates/ifastnet-child/assets/images/logo.png" onload='document.getElementById("sa").style.color = "green";' onerror='document.getElementById("sa").style.color = "red";'>`;
+            
+        } else if(type == "hosters"){
+            const hd = document.createElement('imgc')
+            const sh = document.createElement('imgd')
+            const i = document.createElement('imge')
+            const nh = document.createElement('imgf')
+
+            hd.innerHTML = `<img style="visibility: hidden; height: 0px;" src="http://hostingduck.ml/img/hero.png" onload='document.getElementById("hostingduck").style.color = "green";' onerror='document.getElementById("hostingduck").style.color = "red";'>`;
+            sh.innerHTML = `<img style="visibility: hidden; height: 0px;" src="http://smallhost.us.to/images/img.png" onload='document.getElementById("smallhost").style.color = "green";' onerror='document.getElementById("smallhost").style.color = "red";'>`;
+            i.innerHTML = `<img style="visibility: hidden; height: 0px;" src="https://www.infinityfree.net/images/logo.png" onload='document.getElementById("infinityfree").style.color = "green";' onerror='document.getElementById("infinityfree").style.color = "red";'>`;
+            nh.innerHTML = `<img style="visibility: hidden; height: 0px;" src="https://nxtshost.eu.org/assets/images/friends.png" onload='document.getElementById("nxtshost").style.color = "green";' onerror='document.getElementById("nxtshost").style.color = "red";'>`;
+        } else if(!type) {
+            alert("No check type!")
+        }
+    }
+
+</script>
+
+</html>
